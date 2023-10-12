@@ -1,0 +1,412 @@
+/* declaring constants like color, fonts and sizes */
+:root{
+  /*font size */
+  --size-16 : 1rem;
+  --size-18 : 1.125rem;
+  --size-21 : 1.3125rem;
+  --size-24 : 1.5rem;
+  --size-30 : 1.875rem;
+  --size-36 : 2.25rem;
+  --size-90 : 5.625rem;
+
+  /* colors */
+  --header-bg: #2E323F;
+  --bg-1: #3B4050;
+  --bg-2: #ededed;
+  --white: #FFFFFF;
+  --accent: #A59678;
+  
+}
+
+/* Resetting values */
+*, *::after, *::before{
+  box-sizing: border-box;
+}
+
+img{
+  max-width: 100%;
+}
+
+body{
+  /* background-color: green; */
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Oswald', 'Montserrat', sans-serif;
+}
+
+p{
+  font-family: 'Montserrat', sans-serif;
+  word-spacing: 3px;
+  line-height: 1.5;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+  padding: 0;
+  margin: 0;
+}
+
+h2{
+  color: var(--white);
+}
+
+button{
+  background-color: var(--bg-2);
+  color: var(--white);
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+button:hover, button:focus{
+  opacity: .6;
+}
+
+/* utility classes */
+.container{
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  /* To contain absolute position of nav-toggle */
+  position: relative;
+  /* background-color: yellow; */
+}
+
+.pad-section{
+  padding: 30px 0;
+}
+
+.detail-card{
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+
+/* header styling starts here */
+header{
+  background-color: var(--header-bg);
+  padding: 1.5em 0;
+  text-align: center;
+}
+
+
+
+.nav{
+  width: 100%;
+}
+
+.nav{
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+}
+
+.nav--visible{
+  visibility: visible;
+  height: auto;
+  position: relative;
+}
+
+
+.nav__list{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav__list--primary{
+  margin-bottom: 2em;
+}
+
+.nav__item{
+  margin-top: .75em;
+}
+
+.nav__link{
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--white);
+  font-family: 'Oswald', 'Montserrat', sans-serif;
+}
+
+.nav__link--button{
+  color: var(--header-bg);
+  background-color: var(--white);
+  padding: .25em .75em;
+  border-radius: 25px;
+}
+
+.nav__link:focus, .nav__link:hover{
+  opacity: .6;
+}
+
+/* nav list font properties */
+.nav__list{
+  font-size: var(--size-18);
+  font-weight: bold;
+}
+
+.nav-toggle {
+  cursor: pointer;
+  border: 0;
+  width: 3em;
+  height: 3em;
+  padding: 0em;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--header-bg);
+  transition: opacity 250ms ease;
+  
+  position: absolute;
+  left: 0;
+}
+
+.nav-toggle:focus,
+.nav-toggle:hover {
+  opacity: .75;
+}
+
+.hamburger {
+  width: 50%;
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  margin: 0 auto;
+  height: 3px;
+  background: var(--header-bg);
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  width: 100%;
+}
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+.logo{
+  height: 30px;
+}
+
+/* hero styling starts here */
+.hero{
+  min-height: 600px;
+  height: 90vh;
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  background-color: #3B4050;
+}
+h1{
+  margin-bottom: .5em;
+  font-size: min(3rem, var(--size-90));
+  color: var(--white); 
+}
+h1 span{
+  color: var(--accent);
+}
+
+.hero__details{
+  color: var(--white);
+  font-size: var(--size-24);
+}
+
+.hero__cta{
+  text-transform: uppercase;
+  background-color: var(--accent);
+  margin-top: .75em;
+  padding: .25em .75em;
+  border-radius: 20px;
+  font-size: var(--size-24);
+}
+
+/* SEction two sty6ling starts here */
+.section-two{
+  background-color: var(--bg-2);
+}
+
+.section-two .detail-card h2{
+  color: var(--accent);
+  font-size: var(--size-30);
+  margin-bottom: 10px;
+}
+
+.section-two .detail-card p{
+  font-size: var(--size-18);
+}
+
+.section-three{
+  background-color: var(--white);
+}
+
+.section-three h2{
+  margin-bottom: 20px;
+  color: var(--accent);
+}
+
+.section-three .primary-content{
+  /* text-align: justify; */
+  margin-bottom: 30px;
+}
+
+.section-three .primary-content img{
+  margin: 20px 0;
+}
+
+.section-three .detail-card{
+  background-color: var(--bg-1);
+  color: white;
+  text-align: center;
+  padding: 1.25em;
+}
+.section-three .detail-card h2{
+  color: var(--white);
+}
+
+/* Footer styling starts here */
+.footer{
+  background-color: var(--header-bg);
+  color: white;
+}
+
+.footer h2{
+  margin-bottom: 20px;
+  
+}
+
+.footer h3{
+  color: var(--accent);
+  font-size: var(--size-21);
+  margin-bottom: 10px;
+}
+
+.footer .container div{
+  margin-bottom: 20px;
+}
+.footer-nav__list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer .nav__link{
+  text-transform: capitalize;
+}
+
+/* tablet view */
+@media screen and (min-width: 800px) {
+
+  /* removing margins */
+  .nav__list--primary{
+    margin: 0;
+  }
+
+  .nav__item{
+    margin: 0;
+  }
+
+  .nav-toggle{
+    display: none;
+  }
+
+  .pad-section{
+    padding: 60px 0;
+  }
+  
+  .row{
+    display: flex;
+  }
+
+  /* header styling */
+  header .row{
+    /* background-color: gray; */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+  }
+  .nav{
+    visibility: visible;
+    height: auto;
+    position: relative;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    /* background-color: black; */
+  }
+
+  .nav__list{
+    display: flex;
+    gap: 20px;
+  }
+
+  /* hero styling */
+  .hero .row{
+    align-items: flex-end;
+    gap: 60px;
+    /* background-color: aliceblue; */
+  }
+
+
+  /* section two styling */
+  .section-two .row{
+    gap: 40px;
+  }
+
+  /* section three styling */
+  .section-three .row{
+    display: block;
+  }
+  .secondary-content{
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+  }
+
+  /* footer styling */
+  .footer h2{
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .footer .row{
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  .footer-nav__list .nav__item{
+    margin-bottom: 10px;
+  }
+  .footer .row div{
+    flex: 1;
+  }
+  .footer .row .about{
+    flex: 2;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .section-three .row{
+    display: flex;
+    gap: 40px;
+  }
+
+  .section-three .secondary-content{
+    display: block;
+  }
+}
+
